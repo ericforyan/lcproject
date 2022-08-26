@@ -27,7 +27,7 @@ function SummaryJobs(props) {
 
   return (
     <div className={styles.box}>
-      <h1>{jobsSummary.regional}</h1>
+      <h1>{jobsSummary.regional.toLocaleString("en-US")}</h1>
       <h2>Jobs ({jobsSummary.year})</h2>
       {deltaStr()}
     </div>

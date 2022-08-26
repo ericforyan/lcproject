@@ -1,4 +1,5 @@
 import styles from './styles.module.css';
+import "./w3.css";
 
 function Industries(props) {
 
@@ -20,7 +21,11 @@ function Industries(props) {
         </tr>
         {industryData.industries.map( thisIndustry => (
           <tr>
-            <td> {buildingIcon} {thisIndustry.title} </td>
+            <td>
+              <div style={{width:Math.round((thisIndustry.in_occupation_jobs/industryData.jobs)*1000)/10+'%',backgroundColor:'#eaf2f9',color:'#1a89b8',whiteSpace:'nowrap'}}>
+                {buildingIcon} {thisIndustry.title}
+              </div>
+            </td>
             <td className={styles.right}>{thisIndustry.in_occupation_jobs.toLocaleString("en-US")}</td>
             <td className={styles.right}>{Math.round((thisIndustry.in_occupation_jobs/industryData.jobs)*1000)/10}%</td>
             <td className={styles.right}>{Math.round((thisIndustry.in_occupation_jobs/thisIndustry.jobs)*1000)/10}%</td>

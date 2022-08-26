@@ -16,3 +16,8 @@ tr {
   border-color:darkgray;
   border-width: 1px;
 }
+
+.gc {
+  display: grid;
+  grid-template-columns: 64% 12% 12% 12%;
+}
