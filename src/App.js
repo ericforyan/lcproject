@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import rawData from './data/SampleResponse.json';
 import Summaries from './Summaries/Summaries.js';
+import TrendChart from './Trends/TrendChart.js';
+import TrendTab from './Trends/TrendTab.js';
 
 // eslint-disable-next-line
 import styles from './styles.module.css';
@@ -22,10 +24,8 @@ function App() {
       <h2 className={styles.noBorder}>Occupation Summary for {resData.occupation.title}</h2>
       <Summaries summaryData={resData.summary}/>
       <h2>Regional Trends</h2>
-      <div>
-        Trend Chart<br/>
-        Trend Tabulation data
-      </div>
+      <TrendChart trendData={resData.trend_comparison}/>
+      <TrendTab trendData={resData.trend_comparison}/>
       <h2>Industries Employing {resData.occupation.title}</h2>
       <div>
         Industry Tabulation
