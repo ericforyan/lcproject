@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import styles from './styles.module.css';
 import rawData from './data/SampleResponse.json';
+import Summaries from './Summaries/Summaries.js';
+
+// eslint-disable-next-line
+import styles from './styles.module.css';
 
 function App() {
 
@@ -16,10 +19,8 @@ function App() {
         Occupation Overview
       </h1>
       <p>{resData.occupation.title} in {resData.region.title}</p>
-      <h2>Occupation Summary for {resData.occupation.title}</h2>
-      <div >
-        Summaries
-      </div>
+      <h2 className={styles.noBorder}>Occupation Summary for {resData.occupation.title}</h2>
+      <Summaries summaryData={resData.summary}/>
       <h2>Regional Trends</h2>
       <div>
         Trend Chart<br/>
