@@ -1,5 +1,4 @@
 import styles from './styles.module.css';
-import "./w3.css";
 
 function Industries(props) {
 

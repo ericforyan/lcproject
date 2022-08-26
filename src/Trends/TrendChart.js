@@ -1,4 +1,4 @@
-import { LineChart, Text, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Text, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 import styles from './styles.module.css';
 
 function TrendChart(props) {
@@ -21,7 +21,7 @@ function TrendChart(props) {
   }
 
   const CustomizedDot = (props) => {
-    const { cx, cy, stroke, payload, value, iconType } = props;
+    const { cx, cy, stroke, iconType } = props;
     const size = 8;
 
     if( iconType === 'nation') {
