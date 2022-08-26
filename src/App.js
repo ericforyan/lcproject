@@ -3,6 +3,7 @@ import rawData from './data/SampleResponse.json';
 import Summaries from './Summaries/Summaries.js';
 import TrendChart from './Trends/TrendChart.js';
 import TrendTab from './Trends/TrendTab.js';
+import Industries from './Industries/Industries.js';
 
 // eslint-disable-next-line
 import styles from './styles.module.css';
@@ -27,9 +28,7 @@ function App() {
       <TrendChart trendData={resData.trend_comparison}/>
       <TrendTab trendData={resData.trend_comparison}/>
       <h2>Industries Employing {resData.occupation.title}</h2>
-      <div>
-        Industry Tabulation
-      </div>
+      <Industries industryData={resData.employing_industries}/>
     </div>
   );
 }
