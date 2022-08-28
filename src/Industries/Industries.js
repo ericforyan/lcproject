@@ -21,7 +21,7 @@ function Industries(props) {
         {industryData.industries.map( thisIndustry => (
           <tr>
             <td>
-              <div style={{width:Math.round((thisIndustry.in_occupation_jobs/industryData.jobs)*1000)/10+'%',backgroundColor:'#eaf2f9',color:'#1a89b8',whiteSpace:'nowrap'}}>
+              <div className={styles.percentBar} style={{width:Math.round((thisIndustry.in_occupation_jobs/industryData.jobs)*1000)/10+'%',backgroundColor:'#eaf2f9',color:'#1a89b8',whiteSpace:'nowrap'}}>
                 {buildingIcon} {thisIndustry.title}
               </div>
             </td>

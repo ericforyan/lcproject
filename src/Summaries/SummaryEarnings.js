@@ -8,7 +8,7 @@ function SummaryEarnings(props) {
     <div className={styles.box}>
       <h1>{jobsEarnings.regional}/hr</h1>
       <h2>Median Hourly Earnings</h2>
-      Nation: ${jobsEarnings.national_avg}/hr
+      Nation: ${jobsEarnings.national_avg.toFixed(2)}/hr
     </div>
   );
 }

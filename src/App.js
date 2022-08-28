@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import rawData from './data/SampleResponse.json';
 import Summaries from './Summaries/Summaries.js';
-import TrendChart from './Trends/TrendChart.js';
-import TrendTab from './Trends/TrendTab.js';
 import Industries from './Industries/Industries.js';
+import Trends from './Trends/Trends.js';
 
 // eslint-disable-next-line
 import styles from './styles.module.css';
@@ -12,9 +11,15 @@ function App() {
 
   const [resData, setResData] = useState(rawData);  
 
+  const loadOccupationData = () => {
+    const route = '/occupations';
+    var params = { occupation: '15-1131', area_type: 'msa', area_code: '42660' };
+    //Lightcast: I would make a request here and get data back
+  }
+
   useEffect( () => {
-    // Would load data here
-  }, []);
+    loadOccupationData();
+  }, []);  
 
   return (
     <div className="App">
@@ -25,8 +30,7 @@ function App() {
       <h2 className={styles.noBorder}>Occupation Summary for {resData.occupation.title}</h2>
       <Summaries summaryData={resData.summary}/>
       <h2>Regional Trends</h2>
-      <TrendChart trendData={resData.trend_comparison}/>
-      <TrendTab trendData={resData.trend_comparison}/>
+      <Trends trendData={resData.trend_comparison}/>
       <h2>Industries Employing {resData.occupation.title}</h2>
       <Industries industryData={resData.employing_industries}/>
     </div>

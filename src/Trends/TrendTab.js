@@ -4,15 +4,15 @@ function TrendTab(props) {
 
   const {trendData} = props;
 
-  function calcPercentChange(old, curr) {
+  function calcPercentChange(curr, old) {
     return Math.round(((curr - old)/old) * 1000) / 10;
   }
 
   const buildDeltaStr = (a,b) => {
     return (a - b).toLocaleString("en-US");
   }
- 
-  return(   
+
+ return(
     <div>
       <table width='100%'>
         <tr>
@@ -55,7 +55,7 @@ function TrendTab(props) {
           </td>
           <td className={styles.left}>Nation</td>
           <td className={styles.right}>{trendData.nation[0].toLocaleString("en-US")}</td>
-          <td className={styles.right}>{trendData.state.at(-1).toLocaleString("en-US")}</td>
+          <td className={styles.right}>{trendData.nation.at(-1).toLocaleString("en-US")}</td>
           <td className={styles.right}>{buildDeltaStr(trendData.nation.at(-1), trendData.nation[0])}</td>
           <td className={styles.right}>{calcPercentChange(trendData.nation.at(-1), trendData.nation[0])}%</td>
         </tr>    
