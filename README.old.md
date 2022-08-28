@@ -1,2 +1,0 @@
-# lcproject
-Lightcast Interview Project
