@@ -13,7 +13,7 @@ function Trends(props) {
     return validated;
   }  
 
-  if( dataValidated() == false ) {
+  if( dataValidated() === false ) {
     return (<div>Trend data is not available at the moment.</div>);
   }
   else return(

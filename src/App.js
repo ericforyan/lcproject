@@ -14,7 +14,7 @@ function App() {
   const loadOccupationData = () => {
     const route = '/occupations';
     var params = { occupation: '15-1131', area_type: 'msa', area_code: '42660' };
-    //Lightcast: I would make a request here and get data back
+    //Lightcast: I would make a request here, get the response, and set into resData
   }
 
   useEffect( () => {
