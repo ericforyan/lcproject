@@ -1,6 +1,3 @@
-# lcproject
-Lightcast Interview Project
-
 # To run
 
 Please run the following:
